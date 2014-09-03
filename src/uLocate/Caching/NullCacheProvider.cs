@@ -9,7 +9,7 @@
     /// <summary>
     /// The null cache provider.
     /// </summary>
-    internal class NullCacheProvider : IRuntimeCacheProvider
+    public class NullCacheProvider : IRuntimeCacheProvider
     {
         /// <summary>
         /// Does nothing

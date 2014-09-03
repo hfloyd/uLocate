@@ -1,9 +1,10 @@
-﻿using System.Configuration.Provider;
-
-namespace uLocate.Configuration
+﻿namespace uLocate.Configuration
 {
     using System.Configuration;
 
+    /// <summary>
+    /// The uLocate configuration section
+    /// </summary>
     public class uLocateSection : ConfigurationSection 
     {
         /// <summary>

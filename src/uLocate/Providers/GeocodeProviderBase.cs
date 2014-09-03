@@ -1,9 +1,10 @@
 ﻿namespace uLocate.Providers
 {
     using System;
-    using Caching;
+    using System.Collections.Generic;
     using Models;
     using Umbraco.Core.Cache;
+    using Umbraco.Core.Logging;
 
     /// <summary>
     /// The geocode provider base.
@@ -23,14 +24,6 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="GeocodeProviderBase"/> class.
         /// </summary>
-        protected GeocodeProviderBase()
-            : this(new NullCacheProvider())
-        {            
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GeocodeProviderBase"/> class.
-        /// </summary>
         /// <param name="cache">
         /// The cache.
         /// </param>
@@ -45,13 +38,14 @@
 
             _settings = new GeocodeProviderSettings(GetType());
         }
-        
+
+
         /// <summary>
-        /// Gets the runtime cache.
+        /// Gets the settings.
         /// </summary>
-        public IRuntimeCacheProvider RuntimeCache
+        public IEnumerable<KeyValuePair<string, string>> Settings
         {
-            get { return _cache; } 
+            get { return _settings.Settings; }            
         }
 
         /// <summary>
@@ -65,7 +59,7 @@
         /// </returns>
         public virtual IGeocodeProviderResponse Geocode(IAddress address)
         {
-            return PerformGeocode(address.AsApiRequestFormattedAddressString());
+            return TryGetGeocode(address.AsApiRequestFormattedAddressString());
         }
 
         /// <summary>
@@ -134,12 +128,57 @@
         /// </returns>
         public virtual IGeocodeProviderResponse Geocode(string address1, string address2, string locality, string region, string postalCode, string countryCode)
         {
-            return PerformGeocode(AddressExtensions.GetApiRequestFormattedAddressString(address1, address2, locality, region, postalCode, countryCode));
+            return TryGetGeocode(AddressExtensions.GetApiRequestFormattedAddressString(address1, address2, locality, region, postalCode, countryCode));        
         }
 
-        protected virtual IGeocodeProviderResponse PerformGeocode(string formattedAddress)
+        /// <summary>
+        /// Gets the geocode response from the API
+        /// </summary>
+        /// <param name="formattedAddress">
+        /// The formatted address.
+        /// </param>
+        /// <returns>
+        /// The <see cref="IGeocodeProviderResponse"/>.
+        /// </returns>
+        protected abstract IGeocodeProviderResponse GetGeocodeProviderResponse(string formattedAddress);
+
+        /// <summary>
+        /// The perform geocode.
+        /// </summary>
+        /// <param name="formattedAddress">
+        /// The formatted address.
+        /// </param>
+        /// <returns>
+        /// The <see cref="IGeocodeProviderResponse"/>.
+        /// </returns>        
+        private IGeocodeProviderResponse TryGetGeocode(string formattedAddress)
         {
-            throw new NotImplementedException();
+            return _settings.EnableCaching
+                ? (IGeocodeProviderResponse)_cache
+                    .GetCacheItem(
+                        Caching.CacheKeys.GetGeocodeRequestCacheKey(GetType(), formattedAddress),
+                        () => GetResponse(formattedAddress),
+                        new TimeSpan(0, 0, 0, _settings.CacheDuration))
+                : GetResponse(formattedAddress);            
+        }
+
+        /// <summary>
+        /// The get response.
+        /// </summary>
+        /// <param name="formattedAddress">
+        /// The formatted address.
+        /// </param>
+        /// <returns>
+        /// The <see cref="IGeocodeProviderResponse"/>.
+        /// </returns>
+        private IGeocodeProviderResponse GetResponse(string formattedAddress)
+        {
+            var response = GetGeocodeProviderResponse(formattedAddress);
+
+            if (_settings.LogRequests)
+            LogHelper.Info<GeocodeProviderBase>(string.Format("Attempt to geocode {0} status returned: {1}", formattedAddress, response.Status.ToString()));
+
+            return response;
         }
     }
 }

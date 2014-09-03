@@ -1,7 +1,11 @@
-﻿namespace uLocate.Providers
+﻿using Umbraco.Web.PropertyEditors;
+
+namespace uLocate.Providers
 {
     using System;
+    using System.Collections.Generic;
     using System.Configuration;
+    using System.Linq;
     using Configuration;
     using Umbraco.Core;
 
@@ -13,7 +17,7 @@
         /// <summary>
         /// The uLocate configuration section.
         /// </summary>
-        private static readonly uLocateSection Section = (uLocateSection) ConfigurationManager.GetSection("uLocate");
+        private static readonly uLocateSection Section = (uLocateSection)ConfigurationManager.GetSection("uLocate");
 
         /// <summary>
         /// The provider configuration element in the uLocate configuration section
@@ -71,6 +75,17 @@
         public int GeocodeRequestLimit
         {
             get { return _configuration.GeocodeLimit; }
+        }
+
+        /// <summary>
+        /// Gets the all the settings
+        /// </summary>
+        public IEnumerable<KeyValuePair<string, string>> Settings
+        {
+            get
+            {
+                return _configuration.Settings.GetSettings().Select(x => new KeyValuePair<string, string>(x.Key, x.Value));
+            }
         }
     }
 }

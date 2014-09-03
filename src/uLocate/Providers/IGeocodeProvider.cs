@@ -1,7 +1,7 @@
 ﻿namespace uLocate.Providers
 {
+    using System.Collections.Generic;
     using Models;
-    using Umbraco.Core.Cache;
 
     /// <summary>
     /// Defines an GeocodeProvider
@@ -9,9 +9,9 @@
     public interface IGeocodeProvider
     {
         /// <summary>
-        /// Gets the runtime cache.
+        /// Gets the settings.
         /// </summary>
-        IRuntimeCacheProvider RuntimeCache { get; }
+        IEnumerable<KeyValuePair<string, string>> Settings { get; } 
 
         /// <summary>
         /// Queries the API for a geocode

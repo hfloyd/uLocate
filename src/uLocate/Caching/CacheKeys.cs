@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace uLocate.Caching
+﻿namespace uLocate.Caching
 {
+    using System;
+
     /// <summary>
     /// A utility class to assist in building and maintaining unique cache keys
     /// </summary>
@@ -13,15 +13,15 @@ namespace uLocate.Caching
         /// <param name="provider">
         /// The provider.
         /// </param>
-        /// <param name="requestUrl">
-        /// The request url.
+        /// <param name="formattedAddress">
+        /// The formatted address
         /// </param>
         /// <returns>
         /// The <see cref="string"/>.
         /// </returns>
-        public static string GetGeocodeRequestCacheKey(Type provider, string requestUrl)
+        public static string GetGeocodeRequestCacheKey(Type provider, string formattedAddress)
         {
-            return string.Format("ulocate.{0}.{1}", provider.Name, requestUrl);
+            return string.Format("ulocate.{0}.{1}", provider.Name, formattedAddress);
         }
     }
 }

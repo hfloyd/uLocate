@@ -157,17 +157,20 @@
     <Compile Include="Configuration\SettingElement.cs" />
     <Compile Include="Configuration\SettingsCollection.cs" />
     <Compile Include="Configuration\uLocateSection.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\AddressExtensions.cs" />
     <Compile Include="Models\Coordinate.cs" />
+    <Compile Include="UtilityExtensions.cs" />
     <Compile Include="Models\EntityBase.cs" />
+    <Compile Include="Models\Geocode.cs" />
+    <Compile Include="Models\GeocodeProviderResponse.cs" />
     <Compile Include="Models\GeocodeQuality.cs" />
     <Compile Include="Models\GeocodeStatus.cs" />
     <Compile Include="Models\Interfaces\IAddress.cs" />
     <Compile Include="Models\Interfaces\ICoordinate.cs" />
     <Compile Include="Models\Interfaces\IEntity.cs" />
     <Compile Include="Models\Interfaces\IGeocode.cs" />
-    <Compile Include="Models\Interfaces\IGeocodeProviderRequest.cs" />
     <Compile Include="Models\Interfaces\IRequestMethod.cs" />
     <Compile Include="Models\Interfaces\IGeocodeProviderResponse.cs" />
     <Compile Include="Models\Interfaces\ILocation.cs" />
@@ -187,7 +190,6 @@
     <Folder Include="Editors\" />
     <Folder Include="PackageActions\" />
     <Folder Include="Persistance\Repositories\" />
-    <Folder Include="Search\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

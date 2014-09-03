@@ -11,6 +11,11 @@
         Rooftop,
 
         /// <summary>
+        /// The range interpolated.
+        /// </summary>
+        RangeInterpolated,
+
+        /// <summary>
         /// The center of the locate
         /// </summary>
         Center,

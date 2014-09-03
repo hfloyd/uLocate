@@ -1,6 +1,8 @@
 ﻿namespace uLocate.Configuration
 {
+    using System.Collections.Generic;
     using System.Configuration;
+    using System.Linq;
 
     /// <summary>
     /// The settings collection.
@@ -14,6 +16,17 @@
         public SettingElement this[object index]
         {
             get { return (SettingElement)this.BaseGet(index); }
+        }
+
+        /// <summary>
+        /// Gets all the settings for this provider
+        /// </summary>
+        /// <returns>
+        /// The <see cref="IEnumerable{SettingElement}"/>.
+        /// </returns>
+        public IEnumerable<SettingElement> GetSettings()
+        {
+            return this.Cast<SettingElement>();
         }
 
         /// <summary>

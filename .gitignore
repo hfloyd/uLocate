@@ -7,3 +7,13 @@ ExamineIndexes/
 
 # Ignore Umbraco content cache file
 umbraco.config
+tests/uLocate.Integration.Tests/bin/Debug/HtmlAgilityPack.xml
+tests/uLocate.Integration.Tests/bin/
+src/uLocate.Plugins.Geocode.GoogleMaps/bin/Debug/uLocate.Plugins.Geocode.GoogleMaps.dll.config
+src/uLocate.Plugins.Geocode.GoogleMaps/bin/
+tests/uLocate.Integration.Tests/App_Data/
+src/uLocate.Plugins.Geocode.GoogleMaps/App_Data/
+tests/uLocate.Integration.Tests/obj/
+src/uLocate/obj/
+src/uLocate/bin/
+src/uLocate.Plugins.Geocode.GoogleMaps/obj/

@@ -2,6 +2,9 @@
 {
     using System.Configuration;
 
+    /// <summary>
+    /// The provider element.
+    /// </summary>
     public class ProviderElement : ConfigurationElement
     {
         /// <summary>
@@ -22,7 +25,10 @@
         [ConfigurationProperty("enableCaching", IsRequired = true)]
         public bool EnableCaching
         {
-            get { return (bool)this["enableCaching"]; }
+            get
+            {
+                return (bool)this["enableCaching"];
+            }
         }
 
 
