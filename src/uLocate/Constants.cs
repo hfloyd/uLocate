@@ -1,5 +1,7 @@
 ﻿namespace uLocate
 {
+    using System.Configuration;
+
     /// <summary>
     /// uLocate constants
     /// </summary>
@@ -12,6 +14,29 @@
         {
             get { return "uLocate"; }
         }
+
+        /// <summary>
+        /// The database connection info.
+        /// </summary>
+        public static class DatabaseConnectionInfo
+        {
+            /// <summary>
+            /// Gets the connection string.
+            /// </summary>
+            public static string ConnectionString
+            {
+                get { return ConfigurationManager.ConnectionStrings["umbracoDbDSN"].ConnectionString; }
+            }
+
+            /// <summary>
+            /// Gets the provider name.
+            /// </summary>
+            public static string ProviderName
+            {
+                get { return ConfigurationManager.ConnectionStrings["umbracoDbDSN"].ProviderName; }
+            }
+        }
+
 
         /// <summary>
         /// Gets the world geodetic coordinate system SRID (spacial reference Id)

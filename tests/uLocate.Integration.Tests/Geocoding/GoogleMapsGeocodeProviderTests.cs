@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using uLocate.Caching;
+using uLocate.Integration.Tests.TestHelpers;
 using uLocate.Models;
 using uLocate.Plugins.Geocode.GoogleMaps;
 
@@ -13,6 +14,8 @@ namespace uLocate.Integration.Tests.Geocoding
         [TestFixtureSetUp]
         public void Init()
         {
+            var worker = new DbPreTestDataWorker();
+
             _address = new Address()
             {
                 Address1 = "114 W. Magnolia St.",

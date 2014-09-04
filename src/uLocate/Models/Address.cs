@@ -1,10 +1,36 @@
 ﻿namespace uLocate.Models
 {
+    using System;
+
     /// <summary>
     /// The address.
     /// </summary>
     public class Address : EntityBase, IAddress
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Address"/> class.
+        /// </summary>
+        public Address()
+            : this(new ExtendedDataCollection())
+        {            
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Address"/> class.
+        /// </summary>
+        /// <param name="extendedData">
+        /// The extended data.
+        /// </param>
+        /// <exception cref="Exception">
+        /// Throws an exception if the extended data collection is null
+        /// </exception>
+        public Address(ExtendedDataCollection extendedData)
+        {
+            if (extendedData == null) throw new Exception("Extended Data Collection was null");
+
+            ExtendedData = extendedData;
+        }
+
         /// <summary>
         /// Gets or sets the name associated with the address.
         /// </summary>
@@ -49,5 +75,10 @@
         /// Gets or sets the two letter ISO country code.
         /// </summary>
         public string CountryCode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the extended data collection
+        /// </summary>
+        public ExtendedDataCollection ExtendedData { get; set; }
     }
 }

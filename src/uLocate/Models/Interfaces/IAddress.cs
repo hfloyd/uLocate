@@ -33,6 +33,12 @@
         /// <summary>
         /// Gets or sets the two letter ISO country code.
         /// </summary>
-        string CountryCode { get; set; } 
+        string CountryCode { get; set; }
+
+
+        /// <summary>
+        /// Gets or sets the extended data collection
+        /// </summary>
+        ExtendedDataCollection ExtendedData { get; set; }
     }
 }

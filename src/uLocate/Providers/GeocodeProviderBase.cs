@@ -128,7 +128,7 @@
         /// </returns>
         public virtual IGeocodeProviderResponse Geocode(string address1, string address2, string locality, string region, string postalCode, string countryCode)
         {
-            return TryGetGeocode(AddressExtensions.GetApiRequestFormattedAddressString(address1, address2, locality, region, postalCode, countryCode));        
+            return TryGetGeocode(UtilityExtensions.GetApiRequestFormattedAddressString(address1, address2, locality, region, postalCode, countryCode));        
         }
 
         /// <summary>

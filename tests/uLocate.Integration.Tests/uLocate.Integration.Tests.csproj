@@ -198,8 +198,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\uLocateConfigurationTests.cs" />
+    <Compile Include="Database\DatabaseSchemaCreationTests.cs" />
     <Compile Include="Geocoding\GoogleMapsGeocodeProviderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestHelpers\DbPreTestDataWorker.cs" />
+    <Compile Include="TestHelpers\SqlSyntaxProviderTestHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\uLocate.Plugins.Geocode.GoogleMaps\uLocate.Plugins.Geocode.GoogleMaps.csproj">
