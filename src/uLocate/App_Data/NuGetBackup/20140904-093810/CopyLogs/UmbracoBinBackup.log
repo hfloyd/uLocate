@@ -1,0 +1,91 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Thu Sep 04 09:38:10 2014
+
+   Source : C:\Working Repositories\GitHub\uLocate\src\uLocate\bin\
+     Dest : C:\Working Repositories\GitHub\uLocate\src\uLocate\App_Data\NuGetBackup\20140904-093810\bin\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   0	C:\Working Repositories\GitHub\uLocate\src\uLocate\bin\
+	  New Dir         58	C:\Working Repositories\GitHub\uLocate\src\uLocate\bin\Debug\
+	    New File  		  150016	AutoMapper.dll  0%   87%  100%  
+	    New File  		   28672	AutoMapper.Net4.dll  0%  100%  
+	    New File  		   85033	AutoMapper.xml  0%  100%  
+	    New File  		  114688	businesslogic.dll  0%  100%  
+	    New File  		  119495	businesslogic.xml  0%  100%  
+	    New File  		  512000	cms.dll  0%   25%   51%   76%  100%  
+	    New File  		  329133	cms.xml  0%   39%   79%  100%  
+	    New File  		   51712	controls.dll  0%  100%  
+	    New File  		    9068	controls.xml  0%  100%  
+	    New File  		   24576	interfaces.dll  0%  100%  
+	    New File  		   11197	interfaces.xml  0%  100%  
+	    New File  		  258048	log4net.dll  0%   50%  100%  
+	    New File  		   11264	Microsoft.ApplicationBlocks.Data.dll  0%  100%  
+	    New File  		   71016	Microsoft.Web.Helpers.dll  0%  100%  
+	    New File  		   45416	Microsoft.Web.Infrastructure.dll  0%  100%  
+	    New File  		    1469	Microsoft.Web.Infrastructure.xml  0%  100%  
+	    New File  		  407776	Newtonsoft.Json.dll  0%   32%   64%   96%  100%  
+	    New File  		   19968	SQLCE4Umbraco.dll  0%  100%  
+	    New File  		  470240	System.Data.SqlServerCe.dll  0%   27%   55%   83%  100%  
+	    New File  		  240352	System.Data.SqlServerCe.Entity.dll  0%   54%  100%  
+	    New File  		  168616	System.Net.Http.Formatting.dll  0%   77%  100%  
+	    New File  		  137872	System.Net.Http.Formatting.xml  0%   95%  100%  
+	    New File  		  138432	System.Web.Helpers.dll  0%   94%  100%  
+	    New File  		   74208	System.Web.Helpers.xml  0%  100%  
+	    New File  		  323240	System.Web.Http.dll  0%   40%   81%  100%  
+	    New File  		   73384	System.Web.Http.WebHost.dll  0%  100%  
+	    New File  		   10071	System.Web.Http.WebHost.xml  0%  100%  
+	    New File  		  379561	System.Web.Http.xml  0%   34%   69%  100%  
+	    New File  		  507048	System.Web.Mvc.dll  0%   25%   51%   77%  100%  
+	    New File  		  847872	System.Web.Mvc.xml  0%   30%   61%   92%  100%  
+	    New File  		  266944	System.Web.Razor.dll  0%   49%   98%  100%  
+	    New File  		  365160	System.Web.Razor.xml  0%   35%   71%  100%  
+	    New File  		   41152	System.Web.WebPages.Deployment.dll  0%  100%  
+	    New File  		    2812	System.Web.WebPages.Deployment.xml  0%  100%  
+	    New File  		  204480	System.Web.WebPages.dll  0%   64%  100%  
+	    New File  		   39616	System.Web.WebPages.Razor.dll  0%  100%  
+	    New File  		   17776	System.Web.WebPages.Razor.xml  0%  100%  
+	    New File  		  223301	System.Web.WebPages.xml  0%   58%  100%  
+	    New File  		  192512	TidyNet.dll  0%   68%  100%  
+	    New File  		   30720	uLocate.dll  0%  100%  
+	    New File  		    1402	uLocate.dll.config  0%  100%  
+	    New File  		   77312	uLocate.pdb  0%  100%  
+	    New File  		   1.8 m	Umbraco.Core.dll  0%   13%   27%   40%   54%   67%   81%   94%  100%  
+	    New File  		   1.3 m	Umbraco.Core.xml  0%   17%   35%   53%   71%   89%  100%  
+	    New File  		   38912	umbraco.DataLayer.dll  0%  100%  
+	    New File  		  115002	umbraco.DataLayer.xml  0%  100%  
+	    New File  		   1.7 m	umbraco.dll  0%   14%   28%   42%   57%   71%   85%   99%  100%  
+	    New File  		  372736	umbraco.editorControls.dll  0%   35%   70%  100%  
+	    New File  		  170154	umbraco.editorControls.xml  0%   77%  100%  
+	    New File  		  131072	umbraco.MacroEngines.dll  0%  100%  
+	    New File  		    5678	umbraco.MacroEngines.xml  0%  100%  
+	    New File  		   37888	umbraco.providers.dll  0%  100%  
+	    New File  		   51453	umbraco.providers.xml  0%  100%  
+	    New File  		   57344	Umbraco.Web.UI.dll  0%  100%  
+	    New File  		   1.3 m	umbraco.xml  0%   19%   38%   57%   76%   95%  100%  
+	    New File  		   78336	umbraco.XmlSerializers.dll  0%  100%  
+	    New File  		   34816	UmbracoExamine.dll  0%  100%  
+	    New File  		   22528	UrlRewritingNet.UrlRewriter.dll  0%  100%  
+	  New Dir          0	C:\Working Repositories\GitHub\uLocate\src\uLocate\bin\Release\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         3         2         1         0         0         0
+   Files :        58        58         0         0         0         0
+   Bytes :   14.12 m   14.12 m         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :            78764797 Bytes/sec.
+   Speed :            4506.957 MegaBytes/min.
+
+   Ended : Thu Sep 04 09:38:10 2014

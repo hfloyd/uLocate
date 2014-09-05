@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines an address
     /// </summary>
-    public interface IAddress : ILocation
+    public interface IAddress
     {
         /// <summary>
         /// Gets or sets the address 1.
@@ -35,10 +35,5 @@
         /// </summary>
         string CountryCode { get; set; }
 
-
-        /// <summary>
-        /// Gets or sets the extended data collection
-        /// </summary>
-        ExtendedDataCollection ExtendedData { get; set; }
     }
 }

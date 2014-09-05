@@ -30,40 +30,52 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="businesslogic">
+    <Reference Include="AutoMapper, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="businesslogic, Version=1.0.5350.25716, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\businesslogic.dll</HintPath>
     </Reference>
-    <Reference Include="cms">
+    <Reference Include="cms, Version=1.0.5350.25716, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\cms.dll</HintPath>
     </Reference>
-    <Reference Include="controls">
+    <Reference Include="controls, Version=1.0.5350.25719, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\controls.dll</HintPath>
     </Reference>
-    <Reference Include="interfaces">
+    <Reference Include="interfaces, Version=1.0.5350.25713, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ApplicationBlocks.Data">
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=1.0.1559.20655, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.Helpers">
+    <Reference Include="Microsoft.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\Microsoft.Web.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\MySql.Data.6.6.5\lib\net40\MySql.Data.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SQLCE4Umbraco">
+    <Reference Include="SQLCE4Umbraco, Version=1.0.5350.25718, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\SQLCE4Umbraco.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -75,7 +87,6 @@
     </Reference>
     <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\System.Data.SqlServerCe.Entity.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -116,41 +127,53 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TidyNet">
+    <Reference Include="TidyNet, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\TidyNet.dll</HintPath>
     </Reference>
-    <Reference Include="umbraco">
+    <Reference Include="umbraco, Version=1.0.5350.25719, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\umbraco.dll</HintPath>
     </Reference>
-    <Reference Include="Umbraco.Core">
+    <Reference Include="Umbraco.Core, Version=1.0.5350.25714, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\Umbraco.Core.dll</HintPath>
     </Reference>
-    <Reference Include="umbraco.DataLayer">
+    <Reference Include="umbraco.DataLayer, Version=1.0.5350.25716, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\umbraco.DataLayer.dll</HintPath>
     </Reference>
-    <Reference Include="umbraco.editorControls">
+    <Reference Include="umbraco.editorControls, Version=1.0.5350.25721, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\umbraco.editorControls.dll</HintPath>
     </Reference>
-    <Reference Include="umbraco.MacroEngines">
+    <Reference Include="umbraco.MacroEngines, Version=1.0.5350.25722, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\umbraco.MacroEngines.dll</HintPath>
     </Reference>
-    <Reference Include="umbraco.providers">
+    <Reference Include="umbraco.providers, Version=1.0.5350.25719, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\umbraco.providers.dll</HintPath>
     </Reference>
-    <Reference Include="Umbraco.Web.UI">
+    <Reference Include="Umbraco.Web.UI, Version=1.0.5350.25722, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\Umbraco.Web.UI.dll</HintPath>
     </Reference>
-    <Reference Include="umbraco.XmlSerializers">
+    <Reference Include="umbraco.XmlSerializers, Version=1.0.5350.25719, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\umbraco.XmlSerializers.dll</HintPath>
     </Reference>
-    <Reference Include="UmbracoExamine">
+    <Reference Include="UmbracoExamine, Version=0.6.0.25717, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\UmbracoExamine.dll</HintPath>
     </Reference>
-    <Reference Include="UrlRewritingNet.UrlRewriter">
+    <Reference Include="UrlRewritingNet.UrlRewriter, Version=2.0.60829.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\UmbracoCms.Core.7.1.6\lib\UrlRewritingNet.UrlRewriter.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutomapperMappings.cs" />
     <Compile Include="Caching\CacheKeys.cs" />
     <Compile Include="Caching\NullCacheProvider.cs" />
     <Compile Include="Configuration\ProviderCollection.cs" />
@@ -159,12 +182,33 @@
     <Compile Include="Configuration\SettingsCollection.cs" />
     <Compile Include="Configuration\uLocateSection.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Helpers\CountryHelper.cs" />
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\CustomField.cs" />
+    <Compile Include="Models\CustomFieldsCollection.cs" />
+    <Compile Include="Models\CustomFieldsCollectionExtensions.cs" />
+    <Compile Include="Models\Interfaces\ICountry.cs" />
+    <Compile Include="Models\Interfaces\ICustomField.cs" />
+    <Compile Include="Models\Interfaces\ILocatedAddress.cs" />
+    <Compile Include="Models\Interfaces\ILocationTypeDefinition.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Coordinate.cs" />
     <Compile Include="Models\ExtendedDataCollection.cs" />
+    <Compile Include="Models\LocationTypeDefinition.cs" />
+    <Compile Include="Models\Rdbms\LocatedAddressDto.cs" />
     <Compile Include="Models\Rdbms\LocationDto.cs" />
+    <Compile Include="Models\Rdbms\LocationTypeDefinitionDto.cs" />
+    <Compile Include="Persistance\Factories\LocationTypeDefinitionFactory.cs" />
+    <Compile Include="Persistance\Factories\LocationFactory.cs" />
     <Compile Include="Persistance\Migrations\DatabaseSchemaCreation.cs" />
+    <Compile Include="Persistance\Repositories\ILocatedAddressRepository.cs" />
+    <Compile Include="Persistance\Repositories\LocatedAddressRepository.cs" />
+    <Compile Include="Persistance\Repositories\RespositoryBase.cs" />
+    <Compile Include="Persistance\RepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyVisibility.cs" />
+    <Compile Include="Helpers\GeographyHelper.cs" />
+    <Compile Include="UmbracoApplicationEventHandler.cs" />
     <Compile Include="UtilityExtensions.cs" />
     <Compile Include="Models\EntityBase.cs" />
     <Compile Include="Models\Geocode.cs" />
@@ -193,7 +237,6 @@
   <ItemGroup>
     <Folder Include="Editors\" />
     <Folder Include="PackageActions\" />
-    <Folder Include="Persistance\Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

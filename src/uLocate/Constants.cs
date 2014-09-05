@@ -1,6 +1,9 @@
 ﻿namespace uLocate
 {
+    using System;
     using System.Configuration;
+
+    using Umbraco.Core;
 
     /// <summary>
     /// uLocate constants
@@ -44,6 +47,172 @@
         public static int WorldGeodeticSystemSrid
         {
             get { return 4326; }
+        }
+
+        /// <summary>
+        /// Gets the default location type key
+        /// </summary>
+        public static Guid DefualtLocationTypeKey
+        {
+            get
+            {
+                return "00EEC1F9-7152-4B3B-B8D5-5B813F86EB66".EncodeAsGuid();
+            }
+        }
+
+        /// <summary>
+        /// The property editor alias.
+        /// </summary>
+        public static class PropertyEditorAlias
+        {
+            /// <summary>
+            /// Gets the check box list alias.
+            /// </summary>
+            public static string CheckBoxList
+            {
+                get
+                {
+                    return Umbraco.Core.Constants.PropertyEditors.CheckBoxListAlias;
+                }
+            }
+
+            /// <summary>
+            /// Gets the content picker alias.
+            /// </summary>
+            public static string ContentPicker
+            {
+                get
+                {
+                    return Umbraco.Core.Constants.PropertyEditors.ContentPickerAlias;
+                }
+            }
+
+            /// <summary>
+            /// Gets the drop down list alias.
+            /// </summary>
+            public static string DropDownList
+            {
+                get
+                {
+                    return Umbraco.Core.Constants.PropertyEditors.DropDownListAlias;
+                }
+            }
+
+            /// <summary>
+            /// Gets the member picker.
+            /// </summary>
+            public static string MemberPicker
+            {
+                get
+                {
+                    return Umbraco.Core.Constants.PropertyEditors.MemberPickerAlias;
+                }
+            }
+
+            /// <summary>
+            /// Gets the multiple media picker alias.
+            /// </summary>
+            public static string MultipleMediaPicker
+            {
+                get
+                {
+                    return Umbraco.Core.Constants.PropertyEditors.MultipleMediaPickerAlias;
+                }
+            }
+
+            /// <summary>
+            /// Gets the text box alias.
+            /// </summary>
+            public static string TextBox
+            {
+                get
+                {
+                    return Umbraco.Core.Constants.PropertyEditors.TextboxAlias;
+                }
+            }
+
+            /// <summary>
+            /// Gets the text box multiple.
+            /// </summary>
+            public static string TextBoxMultiple
+            {
+                get
+                {
+                    return Umbraco.Core.Constants.PropertyEditors.TextboxMultipleAlias;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Reserved custom field aliases.
+        /// </summary>
+        public static class CustomFieldAlias
+        {
+            /// <summary>
+            /// Gets the address 1.
+            /// </summary>
+            public static string Address1
+            {
+                get
+                {
+                    return "ulocateAddress1";
+                }
+            }
+
+            /// <summary>
+            /// Gets the address 2.
+            /// </summary>
+            public static string Address2
+            {
+                get
+                {
+                    return "ulocateAddress2";
+                }
+            }
+
+            /// <summary>
+            /// Gets the locality.
+            /// </summary>
+            public static string Locality
+            {
+                get
+                {
+                    return "ulocateLocality";
+                }
+            }
+
+            /// <summary>
+            /// Gets the region.
+            /// </summary>
+            public static string Region
+            {
+                get
+                {
+                    return "ulocateRegion";
+                }
+            }
+
+            /// <summary>
+            /// Gets the postal code.
+            /// </summary>
+            public static string PostalCode
+            {
+                get
+                {
+                    return "ulocatePostalCode";
+                }
+            }
+
+            /// <summary>
+            /// Gets the country code.
+            /// </summary>
+            public static string CountryCode
+            {
+                get
+                {
+                    return "ulocateCountryCode";
+                }
+            }
         }
 
         /// <summary>

@@ -1,0 +1,29 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Thu Sep 04 08:11:19 2014
+
+   Source : C:\Working Repositories\GitHub\uLocate\src\uLocate\bin\
+     Dest : C:\Working Repositories\GitHub\uLocate\src\uLocate\App_Data\NuGetBackup\20140904-081119\bin\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                   0	C:\Working Repositories\GitHub\uLocate\src\uLocate\bin\
+	  New Dir          0	C:\Working Repositories\GitHub\uLocate\src\uLocate\bin\Debug\
+	  New Dir          0	C:\Working Repositories\GitHub\uLocate\src\uLocate\bin\Release\
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         3         2         1         0         0         0
+   Files :         0         0         0         0         0         0
+   Bytes :         0         0         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+   Ended : Thu Sep 04 08:11:19 2014

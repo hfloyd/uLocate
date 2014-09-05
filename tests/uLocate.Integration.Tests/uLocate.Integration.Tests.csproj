@@ -57,6 +57,15 @@
     <Reference Include="Examine">
       <HintPath>..\..\src\packages\Examine.0.1.57.2941\lib\Examine.dll</HintPath>
     </Reference>
+    <Reference Include="HashFoo.Core-Portable">
+      <HintPath>..\..\src\packages\HashFoo.Core.Portable.0.2.4518.11820\lib\HashFoo.Core-Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="HashFoo.SqlServer">
+      <HintPath>..\..\src\packages\HashFoo.SqlServer.0.1.4530.14562\lib\net40\HashFoo.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HashFoo.SqlServer.Spatial">
+      <HintPath>..\..\src\packages\HashFoo.SqlServer.Spatial.0.1.4530.14558\lib\net40\HashFoo.SqlServer.Spatial.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\..\src\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
@@ -82,6 +91,10 @@
     </Reference>
     <Reference Include="Microsoft.ApplicationBlocks.Data">
       <HintPath>..\..\src\packages\UmbracoCms.Core.7.1.6\lib\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\src\packages\HashFoo.SqlServer.SpatialTypes.10.0.0.0\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Helpers">
       <HintPath>..\..\src\packages\UmbracoCms.Core.7.1.6\lib\Microsoft.Web.Helpers.dll</HintPath>
@@ -199,10 +212,12 @@
   <ItemGroup>
     <Compile Include="Configuration\uLocateConfigurationTests.cs" />
     <Compile Include="Database\DatabaseSchemaCreationTests.cs" />
+    <Compile Include="Geocoding\GeographyHelperTests.cs" />
     <Compile Include="Geocoding\GoogleMapsGeocodeProviderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestHelpers\DbPreTestDataWorker.cs" />
     <Compile Include="TestHelpers\SqlSyntaxProviderTestHelper.cs" />
+    <Compile Include="TestHelpers\IntegrationTestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\uLocate.Plugins.Geocode.GoogleMaps\uLocate.Plugins.Geocode.GoogleMaps.csproj">
@@ -218,6 +233,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

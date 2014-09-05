@@ -5,24 +5,17 @@ using Umbraco.Core.Persistence;
 
 namespace uLocate.Integration.Tests.Database
 {
+    using umbraco.cms.businesslogic.packager;
+
     [TestFixture]
-    public class DatabaseSchemaCreationTests
+    public class DatabaseSchemaCreationTests : IntegrationTestBase
     {
-        private UmbracoDatabase _database;
-
-        [TestFixtureSetUp]
-        public void Init()
-        {
-            var worker = new DbPreTestDataWorker();
-
-            _database = worker.Database;
-        }
 
         [Test]
         public void Successfully_Create_Default_Database_Schema()
         {
             //// Arrange
-            var creation = new DatabaseSchemaCreation(_database);
+            var creation = new DatabaseSchemaCreation(Database);
 
             //// Act
             creation.InitializeDatabaseSchema();           
@@ -32,7 +25,7 @@ namespace uLocate.Integration.Tests.Database
         public void Successfully_Uninstall_The_Database()
         {
             //// Arrange
-            var creation = new DatabaseSchemaCreation(_database);
+            var creation = new DatabaseSchemaCreation(Database);
 
             //// Act
             creation.UninstallDatabaseSchema();

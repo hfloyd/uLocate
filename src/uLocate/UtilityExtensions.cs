@@ -1,8 +1,7 @@
-﻿using System;
-using System.Linq;
-
-namespace uLocate.Models
+﻿namespace uLocate.Models
 {
+    using System.Linq;
+
     /// <summary>
     /// Utility extension methods
     /// </summary>
@@ -25,48 +24,35 @@ namespace uLocate.Models
             return coordinate.Latitude.Equals(0) && coordinate.Longitude.Equals(0);
         }
 
-        /// <summary>
-        /// Converts a coordinate into a sql server StGeometry POINT
-        /// </summary>
-        /// <param name="coordinate">
-        /// The coordinate.
-        /// </param>
-        /// <returns>
-        /// The <see cref="string"/>.
-        /// </returns>
-        public static string ToStGeoPoint(this ICoordinate coordinate)
-        {
-            return string.Format("POINT({0} {1})", coordinate.Latitude, coordinate.Longitude);
-        }
 
         #endregion
 
         #region IAddress
 
-        /// <summary>
-        /// Adds the Geocode information to an <see cref="IAddress"/> if possible
-        /// </summary>
-        /// <param name="address">
-        /// The address.
-        /// </param>
-        /// <param name="response">
-        /// The response.
-        /// </param>
-        /// <returns>
-        /// The <see cref="IAddress"/>.
-        /// </returns>
-        public static IAddress AddGeocodeData(this IAddress address, GeocodeProviderResponse response)
-        {
-            if (response.Status != GeocodeStatus.Ok) return address;
-            if (!response.Results.Any()) return address;
+        ///// <summary>
+        ///// Adds the Geocode information to an <see cref="IAddress"/> if possible
+        ///// </summary>
+        ///// <param name="address">
+        ///// The address.
+        ///// </param>
+        ///// <param name="response">
+        ///// The response.
+        ///// </param>
+        ///// <returns>
+        ///// The <see cref="IAddress"/>.
+        ///// </returns>
+        //public static IAddress AddGeocodeData(this IAddress address, GeocodeProviderResponse response)
+        //{
+        //    if (response.Status != GeocodeStatus.Ok) return address;
+        //    if (!response.Results.Any()) return address;
 
-            var result = response.Results.First();
+        //    var result = response.Results.First();
 
-            address.Viewport = result.Viewport;
-            address.Coordinate = new Coordinate() { Latitude = result.Latitude, Longitude = result.Longitude };
+        //    address.Viewport = result.Viewport;
+        //    address.Coordinate = new Coordinate() { Latitude = result.Latitude, Longitude = result.Longitude };
 
-            return address;
-        }
+        //    return address;
+        //}
 
         /// <summary>
         /// Creates a string used for geocoding requests

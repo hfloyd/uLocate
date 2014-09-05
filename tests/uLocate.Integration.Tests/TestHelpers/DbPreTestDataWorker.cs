@@ -5,15 +5,13 @@ namespace uLocate.Integration.Tests.TestHelpers
 {
     public class DbPreTestDataWorker
     {
-        public UmbracoDatabase Database { get; private set; }
+        public IDatabaseUnitOfWorkProvider UnitOfWorkProvider { get; private set; }
 
         public DbPreTestDataWorker()
         {
             SqlSyntaxProviderTestHelper.EstablishSqlSyntax();
 
-            var uowProvider = new PetaPocoUnitOfWorkProvider();
-
-            Database = uowProvider.GetUnitOfWork().Database;
+            UnitOfWorkProvider = new PetaPocoUnitOfWorkProvider();
         }
     }
 }
