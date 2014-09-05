@@ -3,7 +3,7 @@
     /// <summary>
     /// Marker interface for the LocatedAddressRepository.
     /// </summary>
-    internal interface ILocatedAddressRepository
+    internal interface ILocationTypeDefinitionRepository
     {
     }
 }

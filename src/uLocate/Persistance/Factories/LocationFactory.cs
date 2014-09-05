@@ -12,8 +12,14 @@
     /// </summary>
     internal class LocationFactory
     {
+        /// <summary>
+        /// The _geography.
+        /// </summary>
         private readonly GeographyHelper _geography;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LocationFactory"/> class.
+        /// </summary>
         public LocationFactory()
         {
             _geography = new GeographyHelper();
@@ -72,31 +78,41 @@
         public ILocation BuildLocation(LocationDto dto)
         {
             return new Location(new CustomFieldsCollection(dto.FieldValues))
-                       {
-                           Key = dto.Key,
-                           Name = dto.Name,
-                           LocationTypeKey = dto.LocationTypeKey,
-                           Coordinate = _geography.GetCoordinateFromStPointText(dto.Coordinate),
-                           Viewport = _geography.GetViewportFromStLinestringText(dto.Viewport),
-                           GeocodeStatus = (GeocodeStatus)Enum.Parse(typeof(GeocodeStatus), dto.GeocodeStatus),
-                           UpdateDate = dto.UpdateDate,
-                           CreateDate = dto.CreateDate
-                       };
+                {
+                    Key = dto.Key,
+                    Name = dto.Name,
+                    LocationTypeKey = dto.LocationTypeKey,
+                    Coordinate = _geography.GetCoordinateFromStPointText(dto.Coordinate),
+                    Viewport = _geography.GetViewportFromStLinestringText(dto.Viewport),
+                    GeocodeStatus = (GeocodeStatus)Enum.Parse(typeof(GeocodeStatus), dto.GeocodeStatus),
+                    UpdateDate = dto.UpdateDate,
+                    CreateDate = dto.CreateDate
+                };
         }
 
+        /// <summary>
+        /// The build DTO.
+        /// </summary>
+        /// <param name="location">
+        /// The location.
+        /// </param>
+        /// <returns>
+        /// The <see cref="LocationDto"/>.
+        /// </returns>
         public LocationDto BuildDto(ILocation location)
         {
             return new LocationDto()
-                       {
-                           Key = location.Key,
-                           Name = location.Name,
-                           LocationTypeKey = location.LocationTypeKey,
-                           Coordinate = _geography.GetStPointText(location.Coordinate),
-                           Viewport = _geography.GetStLineString(location.Viewport),
-                           GeocodeStatus = location.GeocodeStatus.ToString(),
-                           UpdateDate = location.UpdateDate,
-                           CreateDate = location.CreateDate
-                       };
+                {
+                    Key = location.Key,
+                    Name = location.Name,
+                    LocationTypeKey = location.LocationTypeKey,
+                    Coordinate = _geography.GetStPointText(location.Coordinate),
+                    Viewport = _geography.GetStLineString(location.Viewport),
+                    GeocodeStatus = location.GeocodeStatus.ToString(),   
+                    FieldValues    = location.Fields.SerializeAsJson(),
+                    UpdateDate = location.UpdateDate,
+                    CreateDate = location.CreateDate
+                };
         }
     }
 }

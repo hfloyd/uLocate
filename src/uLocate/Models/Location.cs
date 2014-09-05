@@ -60,5 +60,13 @@
         /// Gets the custom fields collection.
         /// </summary>
         public CustomFieldsCollection Fields { get; internal set; }
+
+        /// <summary>
+        /// Gets or sets the location type definition.
+        /// </summary>
+        /// <remarks>
+        /// Used for validation
+        /// </remarks>
+        internal LocationTypeDefinition LocationTypeDefinition { get; set; }
     }
 }

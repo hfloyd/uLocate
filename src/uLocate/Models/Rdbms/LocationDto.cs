@@ -50,6 +50,7 @@
         /// Gets or sets the location type key.
         /// </summary>
         [Column("locationTypeKey")]
+        [ForeignKey(typeof(LocationTypeDefinitionDto), Name = "FK_ulocateLocation_ulocateLocationTypeDefinition", Column = "pk")]
         public Guid LocationTypeKey { get; set; }
 
         /// <summary>
@@ -73,5 +74,11 @@
         [Column("updateDate")]
         [Constraint(Default = "getdate()")]
         public DateTime UpdateDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the location type definition dto.
+        /// </summary>
+        [ResultColumn]
+        public LocationTypeDefinitionDto LocationTypeDefinitionDto { get; set; } 
     }
 }

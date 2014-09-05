@@ -37,21 +37,5 @@
         /// Gets or sets the sort order.
         /// </summary>
         public int SortOrder { get; set; }
-
-        /// <summary>
-        /// Gets or sets the pre values.
-        /// </summary>
-        public IEnumerable<object> PreValues
-        {
-            get
-            {
-                return _preValues ?? new object[] { };
-            }
-
-            set
-            {
-                _preValues = value;
-            }
-        }
     }
 }

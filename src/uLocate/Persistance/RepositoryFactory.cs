@@ -72,14 +72,14 @@
         }
 
         /// <summary>
-        /// Creates an instance of the <see cref="ILocatedAddressRepository"/>
+        /// Creates an instance of the <see cref="ILocationTypeDefinitionRepository"/>
         /// </summary>
         /// <returns>
-        /// The <see cref="ILocatedAddressRepository"/>.
+        /// The <see cref="ILocationTypeDefinitionRepository"/>.
         /// </returns>
-        public ILocatedAddressRepository CreateLocatedAddressRepository()
+        public ILocationTypeDefinitionRepository CreateLocationTypeDefinitionRepository()
         {
-            return new LocatedAddressRepository(_database, _enableCaching ? _runtimeCache : _nullCacheProvider);
+            return new LocationTypeDefinitionRepository(_database, _enableCaching ? _runtimeCache : _nullCacheProvider);
         }
     }
 }

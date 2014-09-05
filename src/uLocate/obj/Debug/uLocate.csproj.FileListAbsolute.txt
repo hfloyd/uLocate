@@ -58,3 +58,4 @@ C:\Working Repositories\GitHub\uLocate\src\uLocate\bin\Debug\umbraco.MacroEngine
 C:\Working Repositories\GitHub\uLocate\src\uLocate\bin\Debug\umbraco.providers.xml
 C:\Working Repositories\GitHub\uLocate\src\uLocate\obj\Debug\uLocate.dll
 C:\Working Repositories\GitHub\uLocate\src\uLocate\obj\Debug\uLocate.pdb
+C:\Working Repositories\GitHub\uLocate\src\uLocate\obj\Debug\uLocate.csprojResolveAssemblyReference.cache

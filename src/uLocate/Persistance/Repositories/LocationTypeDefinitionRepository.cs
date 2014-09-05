@@ -9,12 +9,12 @@
     using Umbraco.Core.Persistence;
 
     /// <summary>
-    /// Represents the <see cref="LocatedAddressRepository"/>.
+    /// Represents the <see cref="LocationTypeDefinitionRepository"/>.
     /// </summary>
-    internal class LocatedAddressRepository : RepositoryBase<ILocatedAddress>, ILocatedAddressRepository
+    internal class LocationTypeDefinitionRepository : RepositoryBase<ILocatedAddress>, ILocationTypeDefinitionRepository
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LocatedAddressRepository"/> class.
+        /// Initializes a new instance of the <see cref="LocationTypeDefinitionRepository"/> class.
         /// </summary>
         /// <param name="database">
         /// The database.
@@ -22,7 +22,7 @@
         /// <param name="cache">
         /// The cache.
         /// </param>
-        public LocatedAddressRepository(UmbracoDatabase database, IRuntimeCacheProvider cache)
+        public LocationTypeDefinitionRepository(UmbracoDatabase database, IRuntimeCacheProvider cache)
             : base(database, cache)
         {
         }
@@ -37,11 +37,6 @@
         /// The <see cref="IEnumerable{ILocatedAddress}"/>.
         /// </returns>
         protected override IEnumerable<ILocatedAddress> PerformGetAll(params Guid[] keys)
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override Page<ILocatedAddress> Page(long page, long itemsPerPage, Sql sql)
         {
             throw new NotImplementedException();
         }
@@ -66,10 +61,6 @@
             throw new NotImplementedException();
         }
 
-        protected override int PerformCount(Sql sql)
-        {
-            throw new NotImplementedException();
-        }
 
         protected override Sql GetBaseQuery(bool isCount)
         {

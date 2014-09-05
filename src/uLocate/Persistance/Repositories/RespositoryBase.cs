@@ -151,22 +151,6 @@
         /// </returns>
         protected abstract IEnumerable<TEntity> PerformGetAll(params Guid[] keys);
 
-        /// <summary>
-        /// Gets a <see cref="Page{TEntity}"/>
-        /// </summary>
-        /// <param name="page">
-        /// The page.
-        /// </param>
-        /// <param name="itemsPerPage">
-        /// The items per page.
-        /// </param>
-        /// <param name="sql">
-        /// The SQL.
-        /// </param>
-        /// <returns>
-        /// The <see cref="Page{TEntity}"/>.
-        /// </returns>
-        protected abstract Page<TEntity> Page(long page, long itemsPerPage, Sql sql); 
 
         /// <summary>
         /// The perform get.
@@ -230,7 +214,10 @@
         /// <returns>
         /// The <see cref="int"/> count
         /// </returns>
-        protected abstract int PerformCount(Sql sql);
+        protected int PerformCount(Sql sql)
+        {
+            return _database.ExecuteScalar<int>(sql);
+        }
 
         /// <summary>
         /// The get base query.

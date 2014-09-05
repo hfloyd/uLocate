@@ -1,4 +1,6 @@
-﻿namespace uLocate.Models
+﻿using System;
+
+namespace uLocate.Models
 {
     using System.Collections.Concurrent;
     using System.Collections.Generic;
