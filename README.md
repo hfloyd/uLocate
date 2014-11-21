@@ -12,8 +12,16 @@ In order to use uLocate in your umbraco site, you will need to be using a full S
 [Data Types in SQL Server Compact 4.0](http://msdn.microsoft.com/en-us/library/ms172424%28SQL.110%29.aspx))
 
 
+## Solution Contents
 
+### Test/Demo Site
+Included for testing & development purposes is an Umbraco website folder. However, due to the requirement for a full SQL Server database, a .sdf file is NOT included. In order to use the demo site on your local environment, you will need to run the umbraco install wizard to setup a fresh database. 
 
+Setup your empty database on your local environment with a new login user as the DB Owner.
+
+Just copy the web.config file from the /copy-files/ folder to the 
+
+On the install screen, fill in your info and click "custom". Select the database type "MS SQL Server" and fill in your local database credentials. 
 
 
 ## Version Changes (from v.1)
