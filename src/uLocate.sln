@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uLocate", "uLocate\uLocate.csproj", "{61985CB6-50E0-46AA-9E9C-57DBFD3DE66D}"
 EndProject
@@ -14,6 +14,27 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uLocate.Plugins.Geocode.GoogleMaps", "uLocate.Plugins.Geocode.GoogleMaps\uLocate.Plugins.Geocode.GoogleMaps.csproj", "{DD0CC823-A767-4D53-B810-582BC349712C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uLocate.Integration.Tests", "..\tests\uLocate.Integration.Tests\uLocate.Integration.Tests.csproj", "{A3EF561D-C687-491E-B490-960B45A92F94}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "UmbracoTestSite", "http://localhost:60364", "{CC73B3B5-07AF-4ED2-90A9-5ECF216E41AA}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_60364"
+		Debug.AspNetCompiler.PhysicalPath = "UmbracoTestSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60364\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_60364"
+		Release.AspNetCompiler.PhysicalPath = "UmbracoTestSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60364\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "UmbracoTestSite\"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +57,10 @@ Global
 		{A3EF561D-C687-491E-B490-960B45A92F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3EF561D-C687-491E-B490-960B45A92F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3EF561D-C687-491E-B490-960B45A92F94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC73B3B5-07AF-4ED2-90A9-5ECF216E41AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC73B3B5-07AF-4ED2-90A9-5ECF216E41AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC73B3B5-07AF-4ED2-90A9-5ECF216E41AA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC73B3B5-07AF-4ED2-90A9-5ECF216E41AA}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
